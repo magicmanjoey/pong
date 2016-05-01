@@ -2,6 +2,7 @@ public class Paddle {
 	//Paddle's height
 	private static final int HEIGHT = 30;
 	
+	//Amount the paddle moves per "tick"
 	private static final double PADDLE_SPEED = 5;
 	
 	//READ BOARD HEIGHT FROM BOARD CLASS WHEN IT EXISTS!!!!!!
