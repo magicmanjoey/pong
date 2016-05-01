@@ -2,6 +2,9 @@ public class Paddle {
 	//Paddle's height
 	private static final int HEIGHT = 30;
 	
+	//Paddle's width
+	private static final int WIDTH = 6;
+	
 	//Amount the paddle moves per "tick"
 	private static final double PADDLE_SPEED = 5;
 	
@@ -41,6 +44,10 @@ public class Paddle {
 	
 	public int getHeight() {
 		return HEIGHT;
+	}
+	
+	public int getWidth() {
+		return WIDTH;
 	}
 	
 	public Player.PlayerSide getPlayer() {
