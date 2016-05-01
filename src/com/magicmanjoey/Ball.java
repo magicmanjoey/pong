@@ -41,7 +41,8 @@ public class Ball {
 	}
 	
 	public void bounce() {
-		angle = Calc.bounceAngle(angle);
+		angle = Calc.bounceAngle(angle) + 
+				Calc.random(-MAX_ANGLE_DIFFERENCE, MAX_ANGLE_DIFFERENCE);
 	}
 	
 	public void move() {
