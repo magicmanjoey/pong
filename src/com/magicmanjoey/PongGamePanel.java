@@ -58,10 +58,12 @@ public class PongGamePanel extends JPanel {
 				Paddle.getWidth(), Paddle.getHeight());
 	}
 	
+	//ACTUALLY GET COORD!!!!
 	private int getRightPaddleCoord() {
 		return 0;
 	}
 	
+	//ACTUALLY GET COORD!!!!
 	private int getLeftPaddleCoord() {
 		return 0;
 	}
