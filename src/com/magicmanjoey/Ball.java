@@ -4,10 +4,10 @@ public class Ball {
 	private static final int MAX_ANGLE_DIFFERENCE = 10;
 	
 	//Amount the ball moves per "tick"
-	private double BALL_SPEED = 10;
+	private static double BALL_SPEED = 10;
 	
 	//The amount between the center and edge of the ball
-	private int BALL_RADIUS = 8;
+	private static final int BALL_RADIUS = 8;
 	
 	//Ball's x and y positions
 	private int posX;
@@ -55,5 +55,9 @@ public class Ball {
 	
 	public int getPosY() {
 		return posY;
+	}
+
+	public int getBallRadius() {
+		return BALL_RADIUS;
 	}
 }
