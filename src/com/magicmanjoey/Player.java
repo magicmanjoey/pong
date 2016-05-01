@@ -6,9 +6,9 @@ public class Player {
 	private Paddle paddle;
 	private PlayerSide side;
 	
-	public Player(PlayerSide side, Paddle paddle) {
-		this.side = side;
+	public Player(Paddle paddle) {
 		this.paddle = paddle;
+		this.side = this.paddle.getPlayer();
 	}
 	
 	public void incrementScore() {
