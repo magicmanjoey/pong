@@ -18,9 +18,8 @@ public class PongGamePanel extends JPanel {
 
 	//Called to "refresh" the game display
 	public void paintComponent(Graphics g) {
-		
-		g.setColor(Color.BLACK);
-		g.fillRect(0, 0, this.getWidth(), this.getHeight());		
+		paintBackground(g);
+		paintPaddles(g);
 	}
 	
 	public static int boardWidth() {
@@ -33,5 +32,37 @@ public class PongGamePanel extends JPanel {
 	
 	public static int xPixelMargin() {
 		return X_PIXEL_MARGIN;
+	}
+
+	private void paintBackground(Graphics g) {
+		g.setColor(Color.BLACK);
+		g.fillRect(0, 0, this.getWidth(), this.getHeight());
+	}
+
+	private void paintPaddles(Graphics g) {
+		paintRightPaddle(g);
+		paintLeftPaddle(g);
+	}
+	
+	private void paintRightPaddle(Graphics g) {
+		g.setColor(Color.WHITE);
+		g.fillRect(((Calc.xCoordToPixel(-BOARD_WIDTH, this.getWidth(), X_PIXEL_MARGIN, BOARD_WIDTH)) - (int) (0.5 * Paddle.getWidth())), 
+				((Calc.yCoordToPixel(getRightPaddleCoord(), this.getHeight(), BOARD_HEIGHT)) - (int) (0.5 * Paddle.getHeight())),
+				Paddle.getWidth(), Paddle.getHeight());
+	}
+	
+	private void paintLeftPaddle(Graphics g) {
+		g.setColor(Color.WHITE);
+		g.fillRect(((Calc.xCoordToPixel(BOARD_WIDTH, this.getWidth(), X_PIXEL_MARGIN, BOARD_WIDTH)) - (int) (0.5 * Paddle.getWidth())), 
+				((Calc.yCoordToPixel(getLeftPaddleCoord(), this.getHeight(), BOARD_HEIGHT)) - (int) (0.5 * Paddle.getHeight())),
+				Paddle.getWidth(), Paddle.getHeight());
+	}
+	
+	private int getRightPaddleCoord() {
+		return 0;
+	}
+	
+	private int getLeftPaddleCoord() {
+		return 0;
 	}
 }
