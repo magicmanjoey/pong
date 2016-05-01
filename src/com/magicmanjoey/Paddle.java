@@ -7,10 +7,15 @@ public class Paddle {
 	
 	//Amount the paddle moves per "tick"
 	private static final double PADDLE_SPEED = 5;
-	
-	//READ BOARD HEIGHT FROM BOARD CLASS WHEN IT EXISTS!!!!!!
+
 	//Board max height (board's actual height is this * 2)
-	private static final int BOARD_HEIGHT = 100;
+	private static final int BOARD_HEIGHT = PongGamePanel.boardHeight();
+	
+	//Board max width (actual width is this * 2)
+	private static final int BOARD_WIDTH = PongGamePanel.boardWidth();
+	
+	//X Axis margin in pixels
+	private static final int X_PIXEL_MARGIN = PongGamePanel.xPixelMargin();
 	
 	//Paddle's y-position
 	private int posY;
