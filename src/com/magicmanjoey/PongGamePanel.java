@@ -15,6 +15,10 @@ public class PongGamePanel extends JPanel {
 	
 	//Amount of pixels between edge of the playing field and edge of the window
 	private static final int X_PIXEL_MARGIN = 10;
+	
+	//Coordinate of the paddles
+	private int leftPaddleCoord;
+	private int rightPaddleCoord;
 
 	//Called to "refresh" the game display
 	public void paintComponent(Graphics g) {
@@ -58,13 +62,21 @@ public class PongGamePanel extends JPanel {
 				Paddle.getWidth(), Paddle.getHeight());
 	}
 	
-	//ACTUALLY GET COORD!!!!
 	private int getRightPaddleCoord() {
-		return 0;
+		return rightPaddleCoord;
+	}
+
+	private int getLeftPaddleCoord() {
+		return leftPaddleCoord;
 	}
 	
-	//ACTUALLY GET COORD!!!!
-	private int getLeftPaddleCoord() {
-		return 0;
+	public void giveRightPaddleCoord(int coord) {
+		rightPaddleCoord = coord;
 	}
+	
+	public void giveLeftPaddleCoord(int coord) {
+		leftPaddleCoord = coord;
+	}
+	
+	
 }

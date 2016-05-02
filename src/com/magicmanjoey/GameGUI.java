@@ -6,16 +6,16 @@ import javax.swing.JPanel;
 
 public class GameGUI {
 
-	JFrame frame;
-	PongGamePanel gamePanel;
-	JPanel buttonsPanel;
-	JPanel leftControlsPanel;
-	JPanel rightControlsPanel;
-	JButton leftUpButton;
-	JButton leftDownButton;
-	JButton rightUpButton;
-	JButton rightDownButton;
-	JButton startPause;
+	private JFrame frame;
+	private PongGamePanel gamePanel;
+	private JPanel buttonsPanel;
+	private JPanel leftControlsPanel;
+	private JPanel rightControlsPanel;
+	private JButton leftUpButton;
+	private JButton leftDownButton;
+	private JButton rightUpButton;
+	private JButton rightDownButton;
+	private JButton startPause;
 	
 	public static void main(String[] args) {
 		new GameGUI();
@@ -56,5 +56,17 @@ public class GameGUI {
 		frame.setVisible(true);
 		
 	}
+
+
+	public void giveLeftPaddleCoord(int coord) {
+		gamePanel.giveLeftPaddleCoord(coord);
+	}
+
+	public void giveRightPaddleCoord(int coord) {
+		gamePanel.giveRightPaddleCoord(coord);
+	}
+	
+	
+	
 	
 }
