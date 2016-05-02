@@ -27,6 +27,10 @@ public class GameGUI {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		gamePanel = new PongGamePanel();
+		
+		gamePanel.giveLeftPaddleCoord(0);
+		gamePanel.giveRightPaddleCoord(0);
+		
 		leftControlsPanel = new JPanel();
 		rightControlsPanel = new JPanel();
 		
